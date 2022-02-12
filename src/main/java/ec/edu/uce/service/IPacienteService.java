@@ -1,4 +1,4 @@
-package ec.edu.uce.repository;
+package ec.edu.uce.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import ec.edu.uce.modelo.Paciente;
 import ec.edu.uce.modelo.PacienteSencillo;
 
-public interface IPacienteRepo {
+public interface IPacienteService {
 	
 	void insertarPaciente(Paciente cita); // C
 
@@ -15,9 +15,8 @@ public interface IPacienteRepo {
 	void actualizarPaciente(Paciente cita); // U
 
 	void eliminarPaciente(Integer id); // D
-
+	
 	List<PacienteSencillo> buscarPorFechaGenero(LocalDateTime fecha, String genero);
-	
-	
+
 
 }
